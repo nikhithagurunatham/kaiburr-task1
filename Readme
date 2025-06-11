@@ -1,0 +1,31 @@
+# Kaiburr Task 1 – Shell Task Execution API
+
+This is **Task 1** of the Kaiburr recruitment challenge. It is a Spring Boot REST API that allows you to create, execute, and track shell commands. Tasks and their outputs are stored in MongoDB, and the system exposes clean REST endpoints for interaction.
+
+Features:
+
+ ✅ Create a shell task (name + command)
+ ✅ Execute the shell task on the backend server
+ ✅ Retrieve task status and execution output
+ ✅ Store and retrieve tasks using MongoDB
+ ✅ Delete tasks by ID
+ ✅ Tested via Postman
+
+ API Endpoints
+
+| Method | Endpoint                 | Description                       |
+|--------|--------------------------|-----------------------------------|
+| POST   | `/tasks`                 | Create a new shell task           |
+| GET    | `/tasks`                 | Get all tasks                     |
+| GET    | `/tasks/{id}`            | Get task by ID                    |
+| DELETE | `/tasks/{id}`            | Delete task by ID                 |
+| POST   | `/tasks/{id}/execute`    | Execute the shell command         |
+
+Sample JSON Request
+
+POST /tasks:
+json:(body raw)
+{
+  "name": "List files",
+  "command": "ls -la"
+}
